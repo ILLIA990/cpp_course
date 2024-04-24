@@ -3,20 +3,22 @@
 
 
 double y(double x) {
+    double y;
     if (x >= 5) {
-        return 5 * sqrt(x) + 8.2;
+        y = 2 * sqrt(x) + 8.2;
     } else if (1 < x < 5) {
-        return 1 / x;
+        y = 1 / x;
     } else if (-2 <= x <= 1) {
-        return -pow(x, 2);
+        y = -pow(x, 2);
     } else if (x < -2) {
-        return pow(x, 3);
+        y = pow(x, 3);
     }
+    return y;
 }
 
 
 int main() {
-    std::cout << "Введіть x.\n";
+    std::cout << "Enter x.\n";
     double x;
     std::cin >> x;
     std::cout << "y=" << y(x);
